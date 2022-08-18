@@ -46,7 +46,7 @@
     <div class="main-inner">
         <section class="content mob">
             <header class="header">
-                <a href="/?r=1&amp;p=mb&amp;trackCode=aff_4a4f4d_301&amp;uri=#Register" class="header__logo"></a>
+                <a href="#" class="header__logo"></a>
             </header>
             <div class="title-wrap">
                 <div class="title-inner">
@@ -60,7 +60,7 @@
                 </div>
             </div>
             <div class="btn-wrap">
-                <a href="/?r=1&amp;p=mb&amp;trackCode=aff_4a4f4d_301&amp;uri=#Register" class="btn btn_orange">GARANTIR BÔNUS</a>
+                <a href="#" class="btn btn_orange">GARANTIR BÔNUS</a>
             </div>
         </section>
         <section class="content web">
@@ -122,7 +122,7 @@
     return result[1];
   }
 
-  $('.btn_orange').on('click', function(e){
+  $('.btn_orange, .header__logo').on('click', function(e){
     e.preventDefault();
 
     if(clicked){ return; }
