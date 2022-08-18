@@ -114,16 +114,27 @@
 <script>
   var clicked = false;
 
+  var getQueryParam = function(param) {
+    var result = window.location.search.match(new RegExp('[\?\&]' + param + '=([^\&]+)', 'i'));
+    if (result == null || result.length < 1) {
+      return '';
+    }
+    return result[1];
+  }
+
   $('.btn_orange').on('click', function(e){
     e.preventDefault();
 
     if(clicked){ return; }
-    
+
     clicked = true;
+
+    // Get c query param
+    var c = getQueryParam('c');
 
     MgSensor.invoke('interesse');
 
-    window.location.href='https://promo.mr.bet/?lp=mb_creg&trackCode=aff_4a4f4d_301_mgid&tst=ma'
+    window.location.href='https://promo.mr.bet/?lp=mb_creg&trackCode=aff_4a4f4d_301_mgid&tst=ma&cid=' + c;
   });
 </script>
 
